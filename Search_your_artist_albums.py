@@ -15,7 +15,7 @@ def search_artist_albums():
 
     try:
         response = requests.get("https://itunes.apple.com/search", params=parameters, timeout=10)
-        response.raise_for_status()  # catches HTTP errors
+        response.raise_for_status()
     except requests.exceptions.RequestException as e:
         print("❌ Network error:", e)
         return
