@@ -19,7 +19,7 @@ pip install requests
 
 
 ## How to Run
-- python3 itunes_artist_albums.py
+- python3 search_your_artist_albums.py
 
 
 ## Example
