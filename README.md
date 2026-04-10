@@ -1,6 +1,6 @@
-# 🎵 iTunes Artist Albums
+#  iTunes Artist Albums
 
-A lightweight Python command-line application that allows users to search for any artist and retrieve a list of their unique albums from the iTunes Search API, sorted by newest release date.
+A lightweight Python command-line application that allows users to search for any artist and retrieve a list of their unique albums from the  iTunes Search API, sorted by newest release date.
 
 ## Features
 - Search albums by artist name
