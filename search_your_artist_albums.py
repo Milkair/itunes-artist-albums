@@ -42,14 +42,14 @@ def search_artist_albums():
         print(f"No albums found for artist: {artist_name}")
         return
 
-    print(f"\n{artist_name} unique albums found on iTunes:\n")
+    print(f"\n{artist_name.upper()} <{len(albums)}> unique albums found on  iTunes:\n")
 
     albums = dict(sorted(albums.items(), key=lambda x:x[1], reverse=True))
 
-    count = 1
-    for album, date in albums.items():
-        print(f"{count:>2}. {album} — {date}")
-        count += 1
+    for num, album in enumerate(albums.items()):
+        print(f"{num + 1:>3}. {album[0]}. \033[90mRelease date: {album[1][:10]}\033[0m")
+
+    print(f"\nThank you for choosing  Apple iTunes")
 
 if __name__ == "__main__":
     search_artist_albums()
