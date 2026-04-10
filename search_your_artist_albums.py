@@ -26,7 +26,7 @@ def search_artist_albums():
         print(f"No results found for artist: {artist_name}")
         return
 
-    ken_carson_albums = {}
+    albums = {}
 
     for track in py_data["results"]:
         album = track.get("collectionName")
@@ -35,19 +35,19 @@ def search_artist_albums():
         if not album or not date:
             continue
 
-        if album not in ken_carson_albums:
-            ken_carson_albums[album] = date
+        if album not in albums:
+            albums[album] = date
 
-    if not ken_carson_albums:
+    if not albums:
         print(f"No albums found for artist: {artist_name}")
         return
 
     print(f"\n{artist_name} unique albums found on iTunes:\n")
 
-    ken_carson_albums = dict(sorted(ken_carson_albums.items(), key=lambda x:x[1], reverse=True))
+    albums = dict(sorted(albums.items(), key=lambda x:x[1], reverse=True))
 
     count = 1
-    for album, date in ken_carson_albums.items():
+    for album, date in albums.items():
         print(f"{count:>2}. {album} — {date}")
         count += 1
 
